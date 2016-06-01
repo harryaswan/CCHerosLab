@@ -4,7 +4,7 @@ var Baddie = function( personAttributes ) {
 
 Baddie.prototype = {
     attack: function(hero) {
-        hero.defend(this.attributes.attackValue);
+        return hero.defend(this.attributes.attackValue);
     },
     defend: function( attackValue ) {
         var rnd = Math.floor(Math.random() * 10);
@@ -12,8 +12,10 @@ Baddie.prototype = {
             var damage = (this.attributes.defendValue - attackValue);
             if (damage > 0) {
                 this.attributes.health -= damage;
+                return damage;
             }
         }
+        return 0;
     }
 };
 

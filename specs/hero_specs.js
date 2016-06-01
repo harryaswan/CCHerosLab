@@ -6,7 +6,7 @@ var PersonAttibutes = require('../person.js');
 
 describe('Hero', function() {
     beforeEach(function() {
-        var atts = new PersonAttibutes('Sir Scaredalot', 'Cookie');
+        var atts = new PersonAttibutes('Sir Scaredalot', 'Cookie', 10, 10);
         hero = new Hero(atts);
     });
     it('Should have a name', function() {
@@ -26,7 +26,7 @@ describe('Hero', function() {
 
 describe('Hero Eating', function() {
     beforeEach(function() {
-        var atts = new PersonAttibutes('Sir Scaredalot', 'Cookie');
+        var atts = new PersonAttibutes('Sir Scaredalot', 'Cookie', 10, 10);
         hero = new Hero(atts);
         pizza = new Food("Pizza", 20);
         cookie = new Food("Cookie", 10);

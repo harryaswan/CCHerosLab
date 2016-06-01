@@ -12,19 +12,23 @@ Hero.prototype = {
         } else {
             this.attributes.health += food.replen;
         }
-        food = null;
+        return this.attributes.health;
     },
     attack: function(baddie) {
-        baddie.defend(this.attributes.attackValue);
+        return baddie.defend(this.attributes.attackValue);
     },
     defend: function( attackValue ) {
         var rnd = Math.floor(Math.random() * 10);
-        if (rnd < 5) {
+        // console.log("RND:" + rnd);
+        if (rnd < 3) {
             var damage = (this.attributes.defendValue - attackValue);
-            if (damage > 0) {
-                this.attributes.health -= damage;
-            }
+            // console.log("DMG: " + damage);
+            // if (damage > 0) {
+                this.attributes.health += damage;
+                return damage;
+            // }
         }
+        return 0;
     }
 };
 
