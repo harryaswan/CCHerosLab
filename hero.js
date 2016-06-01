@@ -15,16 +15,21 @@ Hero.prototype = {
         return this.attributes.health;
     },
     attack: function(baddie) {
-        return baddie.defend(this.attributes.attackValue);
+        var attackValue = Math.floor(Math.random() * this.attributes.attackValue) + 1;
+        return baddie.defend(attackValue);
     },
     defend: function( attackValue ) {
         var rnd = Math.floor(Math.random() * 10);
         // console.log("RND:" + rnd);
         if (rnd < 3) {
-            var damage = (this.attributes.defendValue - attackValue);
+            var defendValue = Math.floor(Math.random() * this.attributes.defendValue) + 1;
+            var damage = (defendValue - attackValue);
+            if (damage < 0) {
+                damage *= -1;
+            }
             // console.log("DMG: " + damage);
             // if (damage > 0) {
-                this.attributes.health += damage;
+                this.attributes.health -= damage;
                 return damage;
             // }
         }
