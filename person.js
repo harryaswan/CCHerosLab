@@ -1,4 +1,4 @@
-var PersonAttibutes = function( name, favFood, attackValue, defendValue) {
+var PersonAttributes = function( name, favFood, attackValue, defendValue) {
     this.name = name;
     this.favFood = favFood;
     this.health = 100;
@@ -6,4 +6,4 @@ var PersonAttibutes = function( name, favFood, attackValue, defendValue) {
     this.defendValue = defendValue;
 };
 
-module.exports = PersonAttibutes;
+module.exports = PersonAttributes;

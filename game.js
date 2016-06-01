@@ -1,10 +1,10 @@
 var Hero = require('./hero.js');
 var Food = require('./food.js');
 var Rat = require('./rat.js');
-var PersonAttibutes = require('./person.js');
+var PersonAttributes = require('./person.js');
 
-var heroAtts = new PersonAttibutes("Sir Scaredalot", "Cookie", 10, 5);
-var baddieAtts = new PersonAttibutes("Mr Black", "Toast", 10, 5);
+var heroAtts = new PersonAttributes("Sir Scaredalot", "Cookie", 10, 5);
+var baddieAtts = new PersonAttributes("Mr Black", "Toast", 10, 5);
 var foodItems = [new Food("Cookie", 10), new Food("Toast", 10), new Food("Pizza", 20), new Food("Chocolate", 5), new Food("Crisps", 10)];
 var hero = new Hero(heroAtts);
 var baddie = new Hero(baddieAtts);
@@ -32,9 +32,9 @@ while (hero.attributes.health > 0 && baddie.attributes.health > 0) {
 }
 
 if (hero.attributes.health > 0 && baddie.attributes.health <= 0) {
-    console.log("The Hero, " + hero.attributes.name + " Won!");
+    console.log("The Hero, " + hero.attributes.name + ", Won!");
 } else if (hero.attributes.health <= 0 && baddie.attributes.health > 0) {
-    console.log("The Baddie, " + baddie.attributes.name + " Won!");
+    console.log("The Baddie, " + baddie.attributes.name + ", Won!");
 }
 
 

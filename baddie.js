@@ -19,4 +19,4 @@ Baddie.prototype = {
     }
 };
 
-module.exports = Hero;
+module.exports = Baddie;
