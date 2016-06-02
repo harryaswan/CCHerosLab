@@ -59,12 +59,6 @@ function checkWin() {
     }
 }
 
-<<<<<<< HEAD
-if (hero.attributes.health > 0 && baddie.attributes.health <= 0) {
-    console.log("The Hero, " + hero.attributes.name + ", Won!");
-} else if (hero.attributes.health <= 0 && baddie.attributes.health > 0) {
-    console.log("The Baddie, " + baddie.attributes.name + ", Won!");
-=======
 function autoPlay(num) {
     if (run) {
         takeTurn();
@@ -73,7 +67,7 @@ function autoPlay(num) {
         process.exit(0);
     }
     setTimeout(function() {autoPlay(num);}, num);
->>>>>>> c6068bd4ca4e35e9197426261b621e45f90d6b97
+
 }
 
 function takeTurn() {
@@ -133,10 +127,8 @@ function takeTurn() {
         }
     }
     herosTurn = !herosTurn;
-<<<<<<< HEAD
+
     run = true;
-}
-=======
 }
 
 console.log(chalk.blue("Press enter to play >"));
@@ -159,4 +151,3 @@ console.log(chalk.blue("Press enter to play >"));
 //     takeTurn();
 //     console.log("Next turn.....\n\n");
 // }
->>>>>>> c6068bd4ca4e35e9197426261b621e45f90d6b97
